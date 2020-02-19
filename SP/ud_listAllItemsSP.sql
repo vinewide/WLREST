@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `listAllItemsSP`;
 
 DELIMITER $$
 USE `PsProject`$$
-CREATE DEFINER=`mysqldb2020`@`%` PROCEDURE `listAllItemsSP`()
+CREATE  PROCEDURE `listAllItemsSP`()
 L_return:
 BEGIN
 	DECLARE sqlstate_code CHAR(5) DEFAULT '00000';

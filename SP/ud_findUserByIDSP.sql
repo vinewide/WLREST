@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `findUserByIDSP`;
 
 DELIMITER $$
 USE `PsProject`$$
-CREATE DEFINER=`mysqldb2020`@`%` PROCEDURE `findUserByIDSP`(
+CREATE  PROCEDURE `findUserByIDSP`(
 IN IN_UserID INT
 )
 L_return:

@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `listAllUsersSP`;
 
 DELIMITER $$
 USE `PsProject`$$
-CREATE DEFINER=`mysqldb2020`@`%` PROCEDURE `listAllUsersSP`()
+CREATE PROCEDURE `listAllUsersSP`()
 L_return:
 BEGIN
 	DECLARE sqlstate_code CHAR(5) DEFAULT '00000';

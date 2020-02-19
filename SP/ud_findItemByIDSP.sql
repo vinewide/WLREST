@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `findItemByIDSP`;
 
 DELIMITER $$
 USE `PsProject`$$
-CREATE DEFINER=`mysqldb2020`@`%` PROCEDURE `findItemByIDSP`(
+CREATE PROCEDURE `findItemByIDSP`(
 IN IN_ItemID INT
 )
 L_return:
