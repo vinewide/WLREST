@@ -1,18 +1,19 @@
 /*Sql development*/
 
+
 CREATE TABLE `Users` (
-  `UserID` int NOT NULL AUTO_INCREMENT,
+  `UserID` int(11) NOT NULL AUTO_INCREMENT,
   `UserName` varchar(200) DEFAULT NULL,
-  `Field2` varchar(200) DEFAULT NULL,
-  `Field3` varchar(200) DEFAULT NULL,
-  `Field4` varchar(200) DEFAULT NULL,
-  `Field5` varchar(200) DEFAULT NULL,
-  `Field6` varchar(200) DEFAULT NULL,
-  `Field7` varchar(200) DEFAULT NULL,
-  `Field8` varchar(200) DEFAULT NULL,
-  `Field9` varchar(200) DEFAULT NULL,
-  `Field10` varchar(200) DEFAULT NULL,
-  `Field11` varchar(200) DEFAULT NULL,
+  `Password` varchar(500) DEFAULT NULL,
+  `FirstName` varchar(200) DEFAULT NULL,
+  `LastName` varchar(200) DEFAULT NULL,
+  `ConfirmPassword` varchar(500) DEFAULT NULL,
+  `PhoneNumber` bigint(20) DEFAULT NULL,
+  `AddressLine1` varchar(500) DEFAULT NULL,
+  `AddressLine2` varchar(500) DEFAULT NULL,
+  `AddressLine3` varchar(500) DEFAULT NULL,
+  `City` varchar(20) DEFAULT NULL,
+  `State` varchar(20) DEFAULT NULL,
   `Field12` varchar(200) DEFAULT NULL,
   `Field13` varchar(200) DEFAULT NULL,
   `Field14` varchar(200) DEFAULT NULL,
@@ -20,12 +21,14 @@ CREATE TABLE `Users` (
   `Field16` varchar(200) DEFAULT NULL,
   `Field17` varchar(200) DEFAULT NULL,
   `Field18` varchar(200) DEFAULT NULL,
-  `CreatedBy` int NOT NULL,
+  `CreatedBy` int(11) NOT NULL,
   `CreatedTS` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `UpdatedBy` int DEFAULT NULL,
+  `UpdatedBy` int(11) DEFAULT NULL,
   `UpdatedTS` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`UserID`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
 
 CREATE TABLE Items (
   ItemID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
