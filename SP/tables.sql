@@ -53,3 +53,34 @@ CREATE TABLE Items (
   UpdatedTS TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (CreatedBy) REFERENCES Users(UserID)
 );
+
+CREATE TABLE `Event_Master` (
+  `EventID` int(11) NOT NULL AUTO_INCREMENT,
+  `EventName` varchar(200) DEFAULT NULL,
+  `Location` varchar(200) DEFAULT NULL,
+  `StartDate` date DEFAULT NULL,
+  `EndDate` date DEFAULT NULL,
+  `StartTime` time DEFAULT NULL,
+  `EndTime` time DEFAULT NULL,
+  `CreatedBy` int(11) NOT NULL,
+  `CreatedTS` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `UpdatedBy` int(11) DEFAULT NULL,
+  `UpdatedTS` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`EventID`)
+);
+CREATE TABLE `Events` (
+  `SeqNo` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `EventID` int(11) NOT NULL,
+  `Address` varchar(200) DEFAULT NULL,
+  `City` varchar(200) DEFAULT NULL,
+  `State` varchar(200) DEFAULT NULL,
+  `Country` varchar(200) DEFAULT NULL,
+  `Phone Number` bigint(20) DEFAULT NULL,
+  `Hall Name` varchar(200) DEFAULT NULL,
+  `CreatedBy` int(11) NOT NULL,
+  `CreatedTS` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `UpdatedBy` int(11) DEFAULT NULL,
+  `UpdatedTS` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
+   FOREIGN KEY (`EventID`) REFERENCES `Event_Master` (`EventID`)
+) ;
+
